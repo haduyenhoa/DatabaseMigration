@@ -15,6 +15,8 @@
 		EDC1013319EDBB22002FBD84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC1013219EDBB22002FBD84 /* Images.xcassets */; };
 		EDC1013619EDBB22002FBD84 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDC1013419EDBB22002FBD84 /* LaunchScreen.xib */; };
 		EDC1014219EDBB23002FBD84 /* DatabaseMigrationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC1014119EDBB23002FBD84 /* DatabaseMigrationTests.m */; };
+		FD585B3519FE7FAA009AF9F1 /* DBMigrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FD585B3419FE7FAA009AF9F1 /* DBMigrationManager.m */; };
+		FD585B3719FE820F009AF9F1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD585B3619FE820F009AF9F1 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,9 @@
 		EDC1013B19EDBB23002FBD84 /* DatabaseMigrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DatabaseMigrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC1014019EDBB23002FBD84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDC1014119EDBB23002FBD84 /* DatabaseMigrationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DatabaseMigrationTests.m; sourceTree = "<group>"; };
+		FD585B3319FE7FAA009AF9F1 /* DBMigrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBMigrationManager.h; sourceTree = "<group>"; };
+		FD585B3419FE7FAA009AF9F1 /* DBMigrationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBMigrationManager.m; sourceTree = "<group>"; };
+		FD585B3619FE820F009AF9F1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD585B3719FE820F009AF9F1 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +71,7 @@
 		EDC1011619EDBB22002FBD84 = {
 			isa = PBXGroup;
 			children = (
+				FD585B3619FE820F009AF9F1 /* CoreData.framework */,
 				EDC1012119EDBB22002FBD84 /* DatabaseMigration */,
 				EDC1013E19EDBB23002FBD84 /* DatabaseMigrationTests */,
 				EDC1012019EDBB22002FBD84 /* Products */,
@@ -92,6 +99,8 @@
 				EDC1013419EDBB22002FBD84 /* LaunchScreen.xib */,
 				EDC1012919EDBB22002FBD84 /* DatabaseMigration.xcdatamodeld */,
 				EDC1012219EDBB22002FBD84 /* Supporting Files */,
+				FD585B3319FE7FAA009AF9F1 /* DBMigrationManager.h */,
+				FD585B3419FE7FAA009AF9F1 /* DBMigrationManager.m */,
 			);
 			path = DatabaseMigration;
 			sourceTree = "<group>";
@@ -226,6 +235,7 @@
 				EDC1012B19EDBB22002FBD84 /* DatabaseMigration.xcdatamodeld in Sources */,
 				EDC1012E19EDBB22002FBD84 /* ViewController.m in Sources */,
 				EDC1012519EDBB22002FBD84 /* main.m in Sources */,
+				FD585B3519FE7FAA009AF9F1 /* DBMigrationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DatabaseMigration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -360,6 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DatabaseMigration/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -378,6 +390,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = DatabaseMigrationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DatabaseMigration.app/DatabaseMigration";
@@ -393,6 +406,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = DatabaseMigrationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DatabaseMigration.app/DatabaseMigration";
@@ -418,6 +432,7 @@
 				EDC1014719EDBB23002FBD84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EDC1014819EDBB23002FBD84 /* Build configuration list for PBXNativeTarget "DatabaseMigrationTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +441,7 @@
 				EDC1014A19EDBB23002FBD84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
