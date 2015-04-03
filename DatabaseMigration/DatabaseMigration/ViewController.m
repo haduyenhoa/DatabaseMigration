@@ -17,6 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *escapedStr = @"Sorry, your search doesn\\u0027t have any result";
+    NSString *unescapedStr = [NSString
+                              stringWithCString:[escapedStr cStringUsingEncoding:NSUTF8StringEncoding]
+                              encoding:NSNonLossyASCIIStringEncoding];
+    NSLog(@"unescapedStr = %@", unescapedStr);
 }
 
 - (void)didReceiveMemoryWarning {
